@@ -1,0 +1,29 @@
+# ---- Data & large artifacts (never commit) ----
+data/
+checkpoints/
+submissions/
+results/*
+!results/leaderboard.md
+*.pth
+*.pt
+*.zip
+
+# ---- Credentials (NEVER commit) ----
+.kaggle/
+**/kaggle.json
+**/access_token
+*.token
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
