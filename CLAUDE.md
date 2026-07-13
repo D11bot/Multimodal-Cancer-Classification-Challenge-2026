@@ -1,5 +1,8 @@
 # CLAUDE.md — Multimodal Cancer Classification Challenge 2026
 
+
+Multimodal Cancer Classification Challenge 2026. This repo is my entry for a Kaggle-style challenge that classifies single cells as malignant or benign from paired brightfield and fluorescence microscopy images. My approach joins two ResNet-18 encoders through a cross-modal attention fusion head, with cross-modal contrastive (self-supervised) pretraining on the paired cells before supervised fine-tuning, and selects models with patient-grouped cross-validation using out-of-fold ROC-AUC as the source of truth, since the public leaderboard is only a noisy subset of the test set. The best single model reaches about 0.88 out-of-fold AUC, and a rank-averaged ensemble with test-time augmentation lifts it slightly further.
+
 ## Task & metric
 - Binary classification of oral-cytology **cells** as cancer (1) / healthy (0) from **paired
   brightfield (BF) + fluorescence (FL)** microscopy images, **128×128**.
